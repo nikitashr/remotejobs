@@ -1,0 +1,56 @@
+<h1>Post a Job</h1>
+<p>Your job listing will remain on this site for 45 days. After 45 days your job listing will expire and be removed. You can always post the job again for another 45 days.</p>
+
+<p>Step 1: Create your AD</p>
+
+<%= form_for :job do |f| %>
+	<p>
+		<%= f.label :job_title %>
+		<%= f.text_field :job %>
+	</p>
+
+	<p>
+		<%= f.label :category %>
+		<p>
+			<%= f.radio_button :category, 'design' %> 
+			<%= f.label :category, 'Design', :value => 'design' %> 
+			<br/>
+			<%= f.radio_button :category, 'programming' %> 
+			<%= f.label :category, 'Programming', :value => 'programming' %>
+			<br/>
+			<%= f.radio_button :category, 'business' %> 
+			<%= f.label :category, 'Business/Exec', :value => 'business' %>
+			<br/>
+			<%= f.radio_button :category, 'administration' %> 
+			<%= f.label :category, 'System Administration', :value => 'administration' %>
+			<br/>
+			<%= f.radio_button :category, 'copywriter' %> 
+			<%= f.label :category, 'Copywriter', :value => 'copywriter' %>
+			<br/>
+			<%= f.radio_button :category, 'support' %> 
+			<%= f.label :category, 'Customer Service/Support', :value => 'support' %>
+			<br/>
+			<%= f.radio_button :category, 'misc' %> 
+			<%= f.label :category, 'Miscellaneous', :value => 'misc' %>
+		</p>
+	</p>
+	
+	<p>
+		<%= f.label :headquarters %>
+		<%= f.text_field :headquarters %>
+	</p>
+
+	<p>
+		<%= f.label :job_description %>
+		<%= f.text_area :job_description %>
+	</p>
+
+	<p>
+		<%= f.label :how_do_people_apply_for_this_job? %>
+		<%= f.text_area :job_application %>
+	</p>
+
+
+
+
+<% end %>
