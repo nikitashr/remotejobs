@@ -3,6 +3,8 @@
 
 <p>Step 1: Create your AD</p>
 
+<p>First, Tell us about the position: </p>
+
 <%= form_for :job do |f| %>
 	<p>
 		<%= f.label :job_title %>
@@ -50,7 +52,20 @@
 		<%= f.text_area :job_application %>
 	</p>
 
+	<p>Tell us about your Company:</p>
 
+	<p>
+		<%= f.label :company_name %>
+		<%= f.text_area :company_name %>
+	</p>
 
+	<p>
+		<%= f.label :url %>
+		<%= f.text_area :company_url %>
+	</p>
 
+	<p>
+		<%= f.label :email %>
+		<%= f.text_area :company_email %>
+	</p>
 <% end %>
